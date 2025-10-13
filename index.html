@@ -5,10 +5,212 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alder & Pine Home Improvements</title>
   <meta name="description" content="Alder & Pine Home Improvements — handyman services, outdoor living projects, and reconstruction (flood/fire) for Colorado Springs • Palmer Lake • Monument." />
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0f172a;        /* slate-900 */
+      --bg:#f8fafc;         /* slate-50 */
+      --brand:#1e3a8a;      /* blue-800 */
+      --accent:#a3e635;     /* lime-400 */
+      --muted:#334155;      /* slate-700 */
+      --card:#ffffff;
+      --ring:#93c5fd;       /* blue-300 */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+    .wrap{max-width:1120px;margin-inline:auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(248,250,252,.8);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid #e2e8f0;z-index:30}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .logo-badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#0ea5e9);display:grid;place-items:center;color:#fff;font-weight:800}
+
+    .btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 6px 16px rgba(30,58,138,.2);border:2px solid transparent}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.outline{background:#fff;color:var(--brand);border-color:var(--brand)}
+
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center}
+    .hero h1{font-size:clamp(28px,4vw,48px);line-height:1.05;margin:0 0 10px}
+    .hero p{font-size:clamp(16px,2vw,20px);color:var(--muted);margin:0 0 18px}
+    .stat{display:flex;gap:12px;align-items:center;color:var(--muted);margin:8px 0}
+    .stat b{color:var(--ink)}
+    .hero-card{background:var(--card);border:1px solid #e2e8f0;border-radius:18px;padding:20px}
+    .hero-card h3{margin:0 0 10px}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid #e2e8f0;border-radius:18px;padding:18px}
+    .card h3{margin:0 0 8px}
+
+    .section{padding:28px 0}
+    .kicker{font-weight:800;color:var(--brand);text-transform:uppercase;letter-spacing:.12em;font-size:12px}
+    .list{margin:0;padding-left:18px;color:var(--muted)}
+
+    .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+    .tile{aspect-ratio:16/10;border-radius:14px;border:1px solid #e2e8f0;background:#ecfeff url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat}
+    .tile:nth-child(2){background-image:url('https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?q=80&w=1200&auto=format&fit=crop')}
+    .tile:nth-child(3){background-image:url('https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1200&auto=format&fit=crop')}
+    .tile:nth-child(4){background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop')}
+    .tile:nth-child(5){background-image:url('https://images.unsplash.com/photo-1541976590-713941681591?q=80&w=1200&auto=format&fit=crop')}
+    .tile:nth-child(6){background-image:url('https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1200&auto=format&fit=crop')}
+
+    form{display:grid;gap:12px}
+    input,textarea,select{padding:12px 14px;border-radius:12px;border:1.5px solid #cbd5e1;outline:none}
+    input:focus,textarea:focus,select:focus{border-color:var(--ring);box-shadow:0 0 0 4px rgba(147,197,253,.35)}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    footer{padding:36px 0;color:#475569}
+
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
 </head>
 <body>
-  <h1>Alder & Pine Home Improvements</h1>
-  <p>This site is under construction. Check back soon!</p>
+  <header>
+    <div class="wrap nav">
+      <div class="logo">
+        <div class="logo-badge">A&P</div>
+        <div>Alder & Pine <span style="font-weight:600;color:var(--muted);">Home Improvements</span></div>
+      </div>
+      <a href="#contact" class="btn">Get a Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">Colorado Springs • Palmer Lake • Monument</div>
+          <h1>Handyman, Outdoor Living, and Reconstruction — done with care and precision.</h1>
+          <p>We handle the punch-list you’ve been putting off, build the outdoor spaces you’ve been dreaming about, and step in for <strong>reconstruction only</strong> after floods or fires (no mitigation/demo).</p>
+          <div class="stat"><span>•</span> <b>Licensed & insured.</b> No stock images with people — only our work.</div>
+          <div class="stat"><span>•</span> <b>Clear, fair pricing.</b> We price by square foot / linear foot where it makes sense.</div>
+          <div class="stat"><span>•</span> <b>Owner‑led.</b> Communication that respects your time.</div>
+          <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="#contact" class="btn">Start a Quote</a>
+            <a href="#services" class="btn outline">Our Services</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Reconstruction Quick Start</h3>
+          <div class="grid cols-2">
+            <div class="card"><h3>Drywall</h3><p class="list">Hang • Tape • Texture • Ready‑to‑paint</p></div>
+            <div class="card"><h3>Flooring</h3><p class="list">Carpet + pad • LVP (labor)</p></div>
+            <div class="card"><h3>Trim</h3><p class="list">Baseboard • Doors • Casing</p></div>
+            <div class="card"><h3>Framing/Furring</h3><p class="list">2×4 @ 24″ OC</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="wrap section">
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Handyman</h3>
+          <ul class="list">
+            <li>Repairs & punch‑lists</li>
+            <li>Small carpentry & trim</li>
+            <li>Fixture swaps</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Outdoor Living</h3>
+          <ul class="list">
+            <li>Deck repairs & refresh</li>
+            <li>Fencing & gates</li>
+            <li>Shade & privacy solutions</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Reconstruction‑Only</h3>
+          <ul class="list">
+            <li>Drywall & texture</li>
+            <li>Baseboard & doors</li>
+            <li>Carpet + pad or LVP (labor)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="kicker">Recent work (no people in photos)</div>
+      <div class="gallery" aria-label="gallery of finished projects (no people shown)">
+        <div class="tile" role="img" aria-label="living room with millwork"></div>
+        <div class="tile" role="img" aria-label="exterior deck"></div>
+        <div class="tile" role="img" aria-label="kitchen trim"></div>
+        <div class="tile" role="img" aria-label="clean hallway"></div>
+        <div class="tile" role="img" aria-label="bathroom update"></div>
+        <div class="tile" role="img" aria-label="bedroom finish"></div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Our Simple Process</h3>
+          <ol class="list">
+            <li>Share a few measurements & photos (phone is fine).</li>
+            <li>We give you a clear scope & price breakdown.</li>
+            <li>We schedule and deliver — clean, on time, respectful.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Service Area</h3>
+          <p class="list">Colorado Springs, Palmer Lake, Monument, Woodmoor, Gleneagle, Black Forest, Northgate. Ask about nearby areas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap section">
+      <div class="grid cols-2">
+        <div>
+          <h2>Start your quote</h2>
+          <p class="list">Tell us a little about your project. If this is a reconstruction job, include the mitigation invoice quantities if you have them.</p>
+          <form name="quote" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="quote" />
+            <div class="two">
+              <input name="name" placeholder="Full name" required />
+              <input name="email" type="email" placeholder="Email" required />
+            </div>
+            <div class="two">
+              <input name="phone" placeholder="Phone" />
+              <input name="city" placeholder="City / ZIP" />
+            </div>
+            <select name="service">
+              <option value="handyman">Handyman</option>
+              <option value="outdoor">Outdoor Living</option>
+              <option value="reconstruction">Reconstruction (flood/fire)</option>
+            </select>
+            <textarea name="details" rows="5" placeholder="Describe the work. You can paste wall lengths, baseboard LF, drywall SF, flooring SF, and any notes."></textarea>
+            <button class="btn" type="submit">Send Request</button>
+          </form>
+          <p class="list" style="margin-top:10px">Submitting the form emails our team and logs the request for follow‑up.</p>
+        </div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="list"><b>Email:</b> <a href="mailto:hello@alderandpine.com">hello@alderandpine.com</a></p>
+          <p class="list"><b>Phone:</b> <a href="tel:+1719xxxxxxx">(719) •••‑••••</a></p>
+          <p class="list"><b>Hours:</b> Mon–Fri 8–5</p>
+          <p class="list"><b>CO Reg & Insurance:</b> On file — provided on request.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div>© <span id="y"></span> Alder & Pine Home Improvements</div>
+        <div style="font-size:12px">No stock photos with people. All images represent spaces only.</div>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
