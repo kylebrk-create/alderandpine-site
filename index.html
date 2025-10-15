@@ -11,6 +11,74 @@
     <meta name="geo.position" content="38.8339;-104.8214">
     <meta name="ICBM" content="38.8339, -104.8214">
     <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:wght@400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Alder & Pine Home Improvements LLC",
+      "image": "https://i.imgur.com/9k1YkkP.png",
+      "description": "Professional handyman services, custom deck building, and fence installation serving Colorado Springs, Monument, Castle Rock, and Pueblo.",
+      "@id": "https://alderandpinehomeimprovements.com",
+      "url": "https://alderandpinehomeimprovements.com",
+      "telephone": "719-377-2436",
+      "priceRange": "$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Colorado Springs",
+        "addressRegion": "CO",
+        "postalCode": "80920",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.8339,
+        "longitude": -104.8214
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Colorado Springs"
+        },
+        {
+          "@type": "City",
+          "name": "Monument"
+        },
+        {
+          "@type": "City",
+          "name": "Castle Rock"
+        },
+        {
+          "@type": "City",
+          "name": "Pueblo"
+        },
+        {
+          "@type": "City",
+          "name": "Fountain"
+        },
+        {
+          "@type": "City",
+          "name": "Woodland Park"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "07:00",
+        "closes": "18:00"
+      },
+      "sameAs": []
+    }
+    </script>
     <style>
         :root {
             --sage-green: #5D745D;
@@ -395,8 +463,8 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>Honest Work<br>Done Right</h1>
-        <p>We show up when we say we will. We do the work we said we'd do. We charge what we quoted. Insured, trained, and actually creative when you want personality in your project.</p>
+        <h1>Professional Handyman & Home Improvement Services<br>Colorado Springs & Surrounding Areas</h1>
+        <p>Serving Colorado Springs, Monument, Castle Rock, and Pueblo. We show up on time, do the work right, and charge exactly what we quoted. Licensed, insured, and trusted throughout the Pikes Peak region.</p>
         <div class="hero-cta">
             <a href="sms:7193772436" class="text-button">TEXT US NOW</a>
             <a href="tel:7193772436" class="phone-link">719-377-2436</a>
@@ -405,26 +473,26 @@
 
     <!-- Services Overview -->
     <div class="container">
-        <h2>What We Do</h2>
-        <p class="section-intro">Handyman services when something breaks. Custom decks and fences when you want something with personality. Inspection remediation when time matters.</p>
+        <h2>Home Improvement Services in Colorado Springs</h2>
+        <p class="section-intro">Professional handyman services, custom deck building, and fence installation throughout Colorado Springs, Monument, Castle Rock, Pueblo, and surrounding areas within 45 miles of 80920.</p>
         
         <div class="services-grid">
             <div class="service-card">
                 <h3>Handyman Services</h3>
-                <p>That thing you've been irritated about for the last time? We fix it. Fast response, done right, priced honestly.</p>
+                <p>Fast, reliable handyman services in Colorado Springs and surrounding areas. That thing you've been irritated about for the last time? We fix it. Same-day service available.</p>
                 <a href="#handyman" class="service-link">Learn more →</a>
             </div>
             
             <div class="service-card">
-                <h3>Decks & Fences</h3>
-                <p>Want something functional but also has character? We're good at that. Not cookie-cutter, actually creative.</p>
+                <h3>Custom Decks</h3>
+                <p>Professional deck builder serving Colorado Springs, Monument, and Castle Rock. Functional designs with character - not cookie-cutter solutions.</p>
                 <a href="#decks-fences" class="service-link">Learn more →</a>
             </div>
             
             <div class="service-card">
-                <h3>For Realtors</h3>
-                <p>Inspection remediation that doesn't kill the deal. We understand closing timelines and work fast.</p>
-                <a href="#realtors" class="service-link">Learn more →</a>
+                <h3>Fence Installation</h3>
+                <p>Quality fence installation throughout the Pikes Peak region. Privacy fences, decorative fences, and repairs done right the first time.</p>
+                <a href="#decks-fences" class="service-link">Learn more →</a>
             </div>
         </div>
     </div>
@@ -456,11 +524,10 @@
 
     <!-- Handyman Section -->
     <div class="container" id="handyman">
-        <h2>Handyman Services</h2>
-        <p class="section-intro">Something broke. You're done dealing with it. Submit a photo and address below and we'll get back to you with a timeline and price.</p>
+        <h2>Handyman Services - Colorado Springs & Surrounding Areas</h2>
+        <p class="section-intro">Professional handyman serving Colorado Springs, Monument, Castle Rock, Pueblo, and everywhere within 45 miles. Something broke and you're done dealing with it? Submit a photo and address below for a fast quote.</p>
         
-        <div class="image-placeholder">
-            [WORK PHOTO: Handyman repair example]
+        <div class="image-placeholder" style="background-image: url('https://i.imgur.com/TqyqxZk.jpeg'); background-size: cover; background-position: center; height: 400px;">
         </div>
         
         <p>We handle the repairs you don't want to deal with anymore. Doors that stick. Outlets that don't work. Drywall that needs patching. All the things on your list that keep getting pushed to next weekend.</p>
@@ -478,15 +545,13 @@
 
     <!-- Decks & Fences -->
     <div class="container" id="decks-fences">
-        <h2>Decks & Fences</h2>
-        <p class="section-intro">Want something functional that also has personality? We're into that. Not everything has to look like it came from a catalog.</p>
+        <h2>Custom Deck Builder & Fence Installation</h2>
+        <p class="section-intro">Building custom decks and fences throughout Colorado Springs, Monument, Castle Rock, and Pueblo. Functional designs with personality - not the same thing everyone else has.</p>
         
-        <div class="image-placeholder">
-            [WORK PHOTO: Custom deck example]
+        <div class="image-placeholder" style="background-image: url('https://i.imgur.com/ytiRXLE.jpeg'); background-size: cover; background-position: center; height: 400px;">
         </div>
         
-        <div class="image-placeholder">
-            [WORK PHOTO: Fence example]
+        <div class="image-placeholder" style="background-image: url('https://i.imgur.com/kM2CsNe.jpeg'); background-size: cover; background-position: center; height: 400px;">
         </div>
         
         <p>We build decks and fences that are structurally sound and also actually interesting to look at. If you want something standard, we can do that. If you want something with character, that's where we're really good.</p>
@@ -514,8 +579,7 @@
         
         <p>We're not the cheapest option and we're not trying to be. What we are is reliable, fast, and good at what we do.</p>
         
-        <div class="image-placeholder">
-            [WORK PHOTO: Before/after inspection remediation]
+        <div class="image-placeholder" style="background-image: url('https://i.imgur.com/QaFOsHM.png'); background-size: cover; background-position: center; height: 400px;">
         </div>
         
         <p><strong>Common inspection remediations:</strong> GFCI outlet installation, handrail installation, caulking, minor electrical repairs, plumbing fixture repairs, deck repairs, safety hazard corrections.</p>
@@ -533,8 +597,9 @@
     <!-- Footer -->
     <footer>
         <p><strong>Alder & Pine Home Improvements LLC</strong></p>
-        <p>Colorado Springs, CO 80920 & surrounding areas</p>
-        <p style="margin-top: 16px;">Insured · Trained · On Time</p>
+        <p>Serving Colorado Springs, Monument, Castle Rock, Pueblo & 45-mile radius from 80920</p>
+        <p><a href="tel:7193772436" style="color: var(--cream); text-decoration: none;">719-377-2436</a></p>
+        <p style="margin-top: 16px;">Licensed · Insured · On Time</p>
         <p style="margin-top: 32px; font-size: 12px;">© 2024 Alder & Pine Home Improvements LLC. All rights reserved.</p>
     </footer>
 
